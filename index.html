@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teacher's Day - Prof. Abdullah Mushtaq</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-color: #081226;
+      --card-bg: rgba(20, 32, 60, 0.9);
+      --accent-color: #4ea8de;
+      --accent-glow: #64dfdf;
+      --text-color: #e0f1f7;
+      --gold: #f1c40f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, sans-serif; }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 15px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Small Floating SVG Background - 9th/10th Math Topics */
+    .bg-svg-pattern {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 0;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+
+    .floating-icon {
+      animation: floatBg 7s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBg {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-12px) rotate(-6deg); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 400px;
+      background: var(--card-bg);
+      border: 2px solid var(--accent-color);
+      border-radius: 24px;
+      padding: 25px 20px;
+      box-shadow: 0 10px 30px rgba(78, 168, 222, 0.2), inset 0 0 15px rgba(100, 223, 223, 0.15);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #3a86ff, #4ea8de);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px rgba(58, 134, 255, 0.4);
+    }
+
+    .teacher-name {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 5px;
+      text-shadow: 0 0 8px var(--accent-glow);
+    }
+
+    .subject-title {
+      font-size: 0.95rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .icon-container {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 20px;
+      background: rgba(78, 168, 222, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--accent-color);
+      box-shadow: 0 0 20px rgba(100, 223, 223, 0.25);
+    }
+
+    .main-svg {
+      width: 70px;
+      height: 70px;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .message {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #d0e1fd;
+      margin-bottom: 25px;
+      padding: 0 10px;
+    }
+
+    .signature-box {
+      border-top: 1px dashed rgba(78, 168, 222, 0.4);
+      padding-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .from-text {
+      font-size: 0.8rem;
+      color: #a2d2ff;
+    }
+
+    .student-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--gold);
+      margin-top: 2px;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #4ea8de, #3a86ff);
+      color: #081226;
+      font-weight: bold;
+      font-size: 0.95rem;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(78, 168, 222, 0.4);
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .btn:active {
+      transform: scale(0.96);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Pattern: 9th & 10th Math Topics (Matrices, Logarithms, Quadratic Eq, Sets, Geometry Triangle) -->
+  <svg class="bg-svg-pattern" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+    <pattern id="math-9th10th" x="0" y="0" width="140" height="140" patternUnits="userSpaceOnUse">
+      <!-- 1. Matrix Bracket [a b / c d] (9th Ch 1) -->
+      <g class="floating-icon" style="animation-delay: 0s;">
+        <path d="M 15 15 L 10 15 L 10 35 L 15 35 M 35 15 L 40 15 L 40 35 L 35 35" stroke="#4ea8de" stroke-width="1.5" fill="none"/>
+        <text x="16" y="24" fill="#64dfdf" font-size="9" font-weight="bold">a  b</text>
+        <text x="16" y="33" fill="#64dfdf" font-size="9" font-weight="bold">c  d</text>
+      </g>
+      <!-- 2. Logarithm log(x) (9th Ch 3) -->
+      <g class="floating-icon" style="animation-delay: 1.5s;">
+        <text x="85" y="28" fill="#4ea8de" font-size="13" font-weight="bold">log</text>
+        <text x="108" y="32" fill="#f1c40f" font-size="9" font-weight="bold">x</text>
+      </g>
+      <!-- 3. Quadratic Formula x² (10th Ch 1) -->
+      <g class="floating-icon" style="animation-delay: 3s;">
+        <text x="20" y="90" fill="#64dfdf" font-size="14" font-weight="bold">x² + bx</text>
+      </g>
+      <!-- 4. Sets Union / Intersection A ∪ B (9th Ch 5 / 10th Ch 5) -->
+      <g class="floating-icon" style="animation-delay: 4.5s;">
+        <circle cx="85" cy="85" r="10" stroke="#4ea8de" stroke-width="1.2" fill="none"/>
+        <circle cx="97" cy="85" r="10" stroke="#64dfdf" stroke-width="1.2" fill="none"/>
+      </g>
+      <!-- 5. Right Angle Triangle / Pythagoras (9th Ch 12/17) -->
+      <g class="floating-icon" style="animation-delay: 2s;">
+        <path d="M 55 110 L 55 125 L 75 125 Z" stroke="#4ea8de" stroke-width="1.5" fill="none"/>
+        <rect x="55" y="120" width="5" height="5" stroke="#f1c40f" stroke-width="1" fill="none"/>
+      </g>
+    </pattern>
+    <rect width="100%" height="100%" fill="url(#math-9th10th)" />
+  </svg>
+
+  <div class="card">
+    <div class="badge">Mathematician</div>
+    <h1 class="teacher-name">Prof. Abdullah Mushtaq</h1>
+    <p class="subject-title">Happy Teacher's Day</p>
+
+    <div class="icon-container">
+      <!-- Main Central Math SVG -->
+      <svg class="main-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 32 C 16 24, 28 24, 32 32 C 36 40, 48 40, 48 32 C 48 24, 36 24, 32 32 C 28 40, 16 40, 16 32 Z" 
+              stroke="#64dfdf" stroke-width="3" stroke-linecap="round" fill="none">
+          <animate attributeName="stroke-dasharray" values="0,200;150,0" dur="4s" repeatCount="indefinite"/>
+        </path>
+        <text x="18" y="20" fill="#f1c40f" font-size="12" font-weight="bold">∑</text>
+        <text x="38" y="50" fill="#f1c40f" font-size="12" font-weight="bold">π</text>
+      </svg>
+    </div>
+
+    <p class="message">
+      Sir, whether it's Matrices or Quadratic Equations, you make every mathematical problem feel so easy to solve. Thank you for your inspiring guidance!
+    </p>
+
+    <div class="signature-box">
+      <p class="from-text">Crafted with respect & gratitude by</p>
+      <div class="student-name">M. Ayan Ali</div>
+    </div>
+
+    <button class="btn" onclick="celebrate()">Celebrate Sir! 📐</button>
+  </div>
+
+  <script>
+    function playMathSound() {
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const frequencies = [300, 400, 500, 600, 800];
+      frequencies.forEach((freq, index) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime + index * 0.08);
+        gain.gain.setValueAtTime(0.15, audioCtx.currentTime + index * 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + index * 0.08 + 0.3);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(audioCtx.currentTime + index * 0.08);
+        osc.stop(audioCtx.currentTime + index * 0.08 + 0.3);
+      });
+    }
+
+    function celebrate() {
+      playMathSound();
+      confetti({
+        particleCount: 110,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#4ea8de', '#64dfdf', '#3a86ff', '#f1c40f']
+      });
+    }
+  </script>
+</body>
+</html>
